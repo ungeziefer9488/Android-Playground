@@ -1,5 +1,7 @@
 package com.example;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Ungeziefer
@@ -7,6 +9,7 @@ package com.example;
  * Time: 11:20
  * To change this template use File | Settings | File Templates.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Dummies {
     private Dummy[] dummies;
 
@@ -15,6 +18,10 @@ public class Dummies {
     }
 
     public void setDummies(Dummy[] dummies) {
+        this.dummies = dummies;
+    }
+
+    public Dummies(Dummy[] dummies) {
         this.dummies = dummies;
     }
 }
