@@ -3,13 +3,14 @@ package com.example;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import org.codehaus.jackson.annotate.JacksonAnnotation;
+import com.example.DAOs.Meal;
+import com.example.DAOs.Mensa;
 import org.codehaus.jackson.map.DeserializationConfig;
 import org.springframework.http.*;
+import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,7 +45,26 @@ public class MyActivity extends Activity {
         //Log.v("test-Tag", "this is a test message");
         //Dummy dummy = restTemplate.getForObject(url, Dummy.class);
 
-        Log.e("debug content",responseEntity.getBody().toString());
+       Log.e("debug content",responseEntity.getBody().toString());
+
+        // Create and populate a simple object to be used in the request
+        Meal meal = null;
+
+// Set the Content-Type header
+        HttpHeaders PorstrequestHeaders = new HttpHeaders();
+        requestHeaders.setContentType(new MediaType("application","json"));
+        HttpEntity<Meal> postrequestEntity = new HttpEntity<Meal>(meal, requestHeaders);
+
+// Create a new RestTemplate instance
+        RestTemplate postrestTemplate = new RestTemplate();
+
+// Add the Jackson and String message converters
+        restTemplate.getMessageConverters().add(new MappingJacksonHttpMessageConverter());
+        restTemplate.getMessageConverters().add(new StringHttpMessageConverter());
+
+// Make the HTTP POST request, marshaling the request to JSON, and the response to a String
+        ResponseEntity<String> postresponseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, String.class);
+
         setContentView(R.layout.main);
     }
 }
