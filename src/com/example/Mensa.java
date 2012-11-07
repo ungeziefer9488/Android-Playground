@@ -11,7 +11,6 @@ import org.codehaus.jackson.annotate.JsonProperty;
  * To change this template use File | Settings | File Templates.
  */
 public class Mensa {
-    @JsonProperty("mensa")
     private GlobalMensaMenu menu;
 
     public Mensa(@JsonProperty("mensa")GlobalMensaMenu mensaMenu) {

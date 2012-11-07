@@ -1,0 +1,145 @@
+{"mensa":{
+    "menu":[
+        {
+            "date":"05.11.2012",
+            "meal":[
+                {
+                    "name":"Blumenkohl mit Hollandaise und K\u00e4se \u00fcberbacken",
+                    "price":{
+                        "student":"1.90",
+                        "normal":"2.55"
+                    }
+                },
+                {
+                    "name":"Allg\u00e4uer Schweineschnitzel mit Sp\u00e4tzle",
+                    "additive":"Schweinefleisch",
+                    "price":{
+                        "student":"2.15",
+                        "normal":"2.85"
+                    }
+                },
+                {
+                    "campaign":"mensaVital",
+                    "name":"Orientalische Gem\u00fcsepfanne mit Zartweizen und ger\u00f6stetem Sesam ",
+                    "price":{
+                        "student":"2.50",
+                        "normal":"3.20"
+                    }
+                }
+            ]
+        },
+        {
+            "date":"06.11.2012",
+            "meal":[
+                {
+                    "name":"Penne Arrabiata",
+                    "price":{
+                        "student":"1.90",
+                        "normal":"2.55"
+                    }
+                },
+                {
+                    "name":"Cordon Bleu von der H\u00e4hnchenbrust mit Sp\u00e4tzle",
+                    "additive":"Gefl\u00fcgel",
+                    "price":{
+                        "student":"2.15",
+                        "normal":"2.55"
+                    }
+                },
+                {
+                    "name":"Chinesische Nudelpfanne",
+                    "additive":"mit Konservierungsstoff",
+                    "price":{
+                        "student":"2.70",
+                        "normal":"3.40"
+                    }
+                }
+            ]
+        },
+        {
+            "date":"07.11.2012",
+            "meal":[
+                {
+                    "name":"Mezzalune mit feiner K\u00fcrbisf\u00fcllung",
+                    "price":{
+                        "student":"2.15",
+                        "normal":"2.85"
+                    }
+                },
+                {
+                    "name":"Bunter Hackbraten mit Rahmso\u00dfe und Kartoffelbrei",
+                    "additive":["mit Antioxidationsmittel", "Rindfleisch"],
+                    "price":{
+                        "student":"2.15",
+                        "normal":"2.85"
+                    }
+                },
+                {
+                    "name":"Feuriges Gem\u00fcse-Fischcurry mit Ingwerreis",
+                    "additive":"Fisch",
+                    "price":{
+                        "student":"2.50",
+                        "normal":"3.20"
+                    }
+                }
+            ]
+        },
+        {
+            "date":"08.11.2012",
+            "meal":[
+                {
+                    "name":"Spagetti \"Bolognese\" mit Wurzelgem\u00fcse und Parmesan",
+                    "additive":["mit Konservierungsstoff", "mit Alkohol", "Rindfleisch"],
+                    "price":{
+                        "student":"1.90",
+                        "normal":"2.55"
+                    }
+                },
+                {
+                    "name":"Chicken Wings an Salatgarnitur",
+                    "additive":"mit S\u00fc\u00dfungsmittel",
+                    "price":{
+                        "student":"2.15",
+                        "normal":"2.85"
+                    }
+                },
+                {
+                    "name":"H\u00e4hnchenbrust mit Ananas aus dem Wok mit Gem\u00fcse und Basmatireis",
+                    "additive":["gewachst", "Gefl\u00fcgel"],
+                    "price":{
+                        "student":"2.70",
+                        "normal":"3.20"
+                    }
+                }
+            ]
+        },
+        {
+            "date":"09.11.2012",
+            "meal":[
+                {
+                    "name":"Currywurst mit Pommes frites",
+                    "additive":["mit S\u00fc\u00dfungsmittel", "Schweinefleisch"],
+                    "price":{
+                        "student":"2.15",
+                        "normal":"2.85"
+                    }
+                },
+                {
+                    "name":"Pasta mit Tomatenso\u00dfe \"Napoli\"",
+                    "price":{
+                        "student":"1.90",
+                        "normal":"2.55"
+                    }
+                },
+                {
+                    "name":"Putengeschnetzeltes Thail\u00e4ndische Art",
+                    "additive":"Gefl\u00fcgel",
+                    "price":{
+                        "student":"2.70",
+                        "normal":"3.20"
+                    }
+                }
+            ]
+        }
+    ]
+}, "success":true}

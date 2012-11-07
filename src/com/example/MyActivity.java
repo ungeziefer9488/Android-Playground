@@ -20,13 +20,11 @@ public class MyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);				// The URL for making the GET request
-        final String url = "http://192.168.0.12/rest/mensa.json";
+        final String url = "http://141.82.160.130:8000/update/";
 
         // Set the Accept header for "application/json"
         HttpHeaders requestHeaders = new HttpHeaders();
         List<MediaType> acceptableMediaTypes = new ArrayList<MediaType>();
-        //acceptableMediaTypes.add(new MediaType("text", "htm", Charset.forName("utf-8")));
-        //acceptableMediaTypes.add(new MediaType("text", "plain"));
         acceptableMediaTypes.add(MediaType.APPLICATION_JSON);
         requestHeaders.setAccept(acceptableMediaTypes);
 
@@ -40,7 +38,7 @@ public class MyActivity extends Activity {
         restTemplate.getMessageConverters().add(m);
 
         // Perform the HTTP GET request
-        //MensaMenu[] mm = restTemplate.getForObject(url, MensaMenu[].class);
+        //DailyMeals[] mm = restTemplate.getForObject(url, DailyMeals[].class);
        ResponseEntity<Mensa> responseEntity = restTemplate.exchange(url, HttpMethod.GET, requestEntity,
                 Mensa.class);
         //Log.v("test-Tag", "this is a test message");

@@ -12,9 +12,9 @@ import java.util.Arrays;
  * To change this template use File | Settings | File Templates.
  */
 public class GlobalMensaMenu {
-    private MensaMenu[] mensaMenus;
+    private DailyMeals[] mensaMenus;
 
-    public GlobalMensaMenu(@JsonProperty("menu") MensaMenu[] mensaMenus) {
+    public GlobalMensaMenu(@JsonProperty("menu") DailyMeals[] mensaMenus) {
         this.mensaMenus = mensaMenus;
     }
 
