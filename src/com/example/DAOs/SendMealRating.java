@@ -1,5 +1,7 @@
 package com.example.DAOs;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Ungeziefer
@@ -13,7 +15,7 @@ public class SendMealRating {
     private Integer quantity;
     private Integer taste;
 
-    public SendMealRating(String userId, Integer costPerformance, Integer quantity, Integer taste) {
+    public SendMealRating(@JsonProperty("user_id") String userId, @JsonProperty("cost_performance") Integer costPerformance, @JsonProperty( "quantity") Integer quantity, @JsonProperty("taste") Integer taste) {
         this.userId = userId;
         this.costPerformance = costPerformance;
         this.quantity = quantity;

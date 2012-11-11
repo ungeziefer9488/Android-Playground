@@ -34,4 +34,36 @@ public class Meal {
         this.campaign = campaign;
         this.price = price;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String[] getAdditive() {
+        return additive;
+    }
+
+    public void setAdditive(String[] additive) {
+        this.additive = additive;
+    }
+
+    public String getCampaign() {
+        return campaign;
+    }
+
+    public void setCampaign(String campaign) {
+        this.campaign = campaign;
+    }
+
+    public Map<String, Float> getPrice() {
+        return price;
+    }
+
+    public void setPrice(Map<String, Float> price) {
+        this.price = price;
+    }
 }

@@ -5,12 +5,18 @@ import android.os.Bundle;
 import android.util.Log;
 import com.example.DAOs.Meal;
 import com.example.DAOs.Mensa;
+import com.example.DAOs.SendMealRating;
+import com.example.utils.CryptoUtils;
 import org.codehaus.jackson.map.DeserializationConfig;
 import org.springframework.http.*;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
+import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,8 +26,8 @@ public class MyActivity extends Activity {
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);				// The URL for making the GET request
-        final String url = "http://141.82.160.130:8000/update/";
+        super.onCreate(savedInstanceState);                // The URL for making the GET request
+        String url = "http://192.168.0.12:8000/update/";
 
         // Set the Accept header for "application/json"
         HttpHeaders requestHeaders = new HttpHeaders();
@@ -40,31 +46,36 @@ public class MyActivity extends Activity {
 
         // Perform the HTTP GET request
         //DailyMeals[] mm = restTemplate.getForObject(url, DailyMeals[].class);
-       ResponseEntity<Mensa> responseEntity = restTemplate.exchange(url, HttpMethod.GET, requestEntity,
-                Mensa.class);
+        //ResponseEntity<Mensa> responseEntity = restTemplate.exchange(url, HttpMethod.GET, requestEntity,
+        //        Mensa.class);
         //Log.v("test-Tag", "this is a test message");
         //Dummy dummy = restTemplate.getForObject(url, Dummy.class);
 
-       Log.e("debug content",responseEntity.getBody().toString());
+        //Log.e("debug content", responseEntity.getBody().toString());
 
         // Create and populate a simple object to be used in the request
-        Meal meal = null;
-
-// Set the Content-Type header
-        HttpHeaders PorstrequestHeaders = new HttpHeaders();
-        requestHeaders.setContentType(new MediaType("application","json"));
-        HttpEntity<Meal> postrequestEntity = new HttpEntity<Meal>(meal, requestHeaders);
-
-// Create a new RestTemplate instance
-        RestTemplate postrestTemplate = new RestTemplate();
+        String mealId = null;
+        try {
+            mealId = CryptoUtils.stringToSHA256("Blumenkohl mit Hollandaise und K\\u00e4se \\u00fcberbacken");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        assert mealId != null;
+        url = "http://192.168.0.12:8000/meals/{mealId}/";
+        Log.e("meal string", url);
+        SendMealRating smr = new SendMealRating(mealId, 1, 2, 3);
+        requestHeaders.setContentType(MediaType.APPLICATION_JSON);
+        HttpEntity<SendMealRating> postrequestEntity = new HttpEntity<SendMealRating>(smr, requestHeaders);
+        Log.e("meal json", postrequestEntity.getBody().toString());
 
 // Add the Jackson and String message converters
         restTemplate.getMessageConverters().add(new MappingJacksonHttpMessageConverter());
         restTemplate.getMessageConverters().add(new StringHttpMessageConverter());
 
 // Make the HTTP POST request, marshaling the request to JSON, and the response to a String
-        ResponseEntity<String> postresponseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, String.class);
-
+        //String postresponseEntity = restTemplate.postForObject(url, smr, String.class);
+        ResponseEntity responseEntity = restTemplate.exchange(url, HttpMethod.POST, postrequestEntity, null, mealId);
+        //Log.e("post test", responseEntity.getBody().toString());
         setContentView(R.layout.main);
     }
 }
