@@ -1,6 +1,6 @@
 package com.example.utils;
 
-import com.example.DAOs.SendMealRating;
+import com.example.SpringDAOs.SendMealRating;
 import org.springframework.http.*;
 import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
