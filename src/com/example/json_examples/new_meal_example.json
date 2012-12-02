@@ -1,0 +1,167 @@
+{"meals":[
+    {
+        "ratings":[],
+        "dates":["05.11.2012"],
+        "name":"Blumenkohl mit Hollandaise und K\u00e4se \u00fcberbacken",
+        "price":{
+            "student":1.9,
+            "normal":2.55
+        },
+        "meal_id":"7c355fa7e7c6cec2a5caf4ee3ec3f62106f2b7d6e088b9b4c4523e70d72647a0",
+        "additives":[]
+    },
+    {
+        "ratings":[],
+        "dates":["05.11.2012"],
+        "name":"Allg\u00e4uer Schweineschnitzel mit Sp\u00e4tzle",
+        "price":{
+            "student":2.15,
+            "normal":2.85
+        },
+        "meal_id":"832f7a5d651d11c87ef9e781cef4875b3a74fbee4fc1d358078195bd945eabac",
+        "additives":["Schweinefleisch"]
+    },
+    {
+        "ratings":[],
+        "dates":["05.11.2012"],
+        "name":"Orientalische Gem\u00fcsepfanne mit Zartweizen und ger\u00f6stetem Sesam ",
+        "price":{
+            "student":2.5,
+            "normal":3.2
+        },
+        "meal_id":"842f4e62c87a668fae47db107432f9852cec77dd6b571a13658e9fa159bfe799",
+        "additives":[]
+    },
+    {
+        "ratings":[],
+        "dates":["06.11.2012"],
+        "name":"Penne Arrabiata",
+        "price":{
+            "student":1.9,
+            "normal":2.55
+        },
+        "meal_id":"fdc409021d54f866895edc144af5c6525a99637aaac3d4a0b2ac6628597aee03",
+        "additives":[]
+    },
+    {
+        "ratings":[],
+        "dates":["06.11.2012"],
+        "name":"Cordon Bleu von der H\u00e4hnchenbrust mit Sp\u00e4tzle",
+        "price":{
+            "student":2.15,
+            "normal":2.55
+        },
+        "meal_id":"cbf23ffdd5d476642b2190d478810d5b662f49b5651437552cf12d6df4cd5e00",
+        "additives":["Gefl\u00fcgel"]
+    },
+    {
+        "ratings":[],
+        "dates":["06.11.2012"],
+        "name":"Chinesische Nudelpfanne",
+        "price":{
+            "student":2.7,
+            "normal":3.4
+        },
+        "meal_id":"7f87a444d80a02e89a403e31a2789094c358719086af1d13a4d4d0a49a935469",
+        "additives":["mit Konservierungsstoff"]
+    },
+    {
+        "ratings":[],
+        "dates":["07.11.2012"],
+        "name":"Mezzalune mit feiner K\u00fcrbisf\u00fcllung",
+        "price":{
+            "student":2.15,
+            "normal":2.85
+        },
+        "meal_id":"fb11c825b2939d13cdada2642f115d85cd5d35ecc945840b88b5384e3bcac727",
+        "additives":[]
+    },
+    {
+        "ratings":[],
+        "dates":["07.11.2012"],
+        "name":"Bunter Hackbraten mit Rahmso\u00dfe und Kartoffelbrei",
+        "price":{
+            "student":2.15,
+            "normal":2.85
+        },
+        "meal_id":"cfe4770a7886f59fb8471d1f49a220f46e128dbccc4c37c30d6f49c2d81895b0",
+        "additives":["Rindfleisch", "mit Antioxidationsmittel"]
+    },
+    {
+        "ratings":[],
+        "dates":["07.11.2012"],
+        "name":"Feuriges Gem\u00fcse-Fischcurry mit Ingwerreis",
+        "price":{
+            "student":2.5,
+            "normal":3.2
+        },
+        "meal_id":"2de8fa9ccf3dbc01d4a02a459c9d14dcd09119a07537bf95e5bc386d05c8ee82",
+        "additives":["Fisch"]
+    },
+    {
+        "ratings":[],
+        "dates":["08.11.2012"],
+        "name":"Spagetti \"Bolognese\" mit Wurzelgem\u00fcse und Parmesan",
+        "price":{
+            "student":1.9,
+            "normal":2.55
+        },
+        "meal_id":"3db311bf140f189b6f2da08578fd5d2e1a8ab442a962fb7af4aec8c5f434392a",
+        "additives":["Rindfleisch", "mit Alkohol", "mit Konservierungsstoff"]
+    },
+    {
+        "ratings":[],
+        "dates":["08.11.2012"],
+        "name":"Chicken Wings an Salatgarnitur",
+        "price":{
+            "student":2.15,
+            "normal":2.85
+        },
+        "meal_id":"38dabf4e89f9d5a3969d525cf76d50bd6a6371b99da0b35a25931384f23e2bb6",
+        "additives":["mit S\u00fc\u00dfungsmittel"]
+    },
+    {
+        "ratings":[],
+        "dates":["08.11.2012"],
+        "name":"H\u00e4hnchenbrust mit Ananas aus dem Wok mit Gem\u00fcse und Basmatireis",
+        "price":{
+            "student":2.7,
+            "normal":3.2
+        },
+        "meal_id":"ffd739c1a91c90c39d203301623f33c397c37d8fec19289a244c668fc95f9c3d",
+        "additives":["Gefl\u00fcgel", "gewachst"]
+    },
+    {
+        "ratings":[],
+        "dates":["09.11.2012"],
+        "name":"Currywurst mit Pommes frites",
+        "price":{
+            "student":2.15,
+            "normal":2.85
+        },
+        "meal_id":"ebd0ec1034a956dbd677bb0314c0ab6fbb31104b78bae408c6211756e5ac5392",
+        "additives":["Schweinefleisch", "mit S\u00fc\u00dfungsmittel"]
+    },
+    {
+        "ratings":[],
+        "dates":["09.11.2012"],
+        "name":"Pasta mit Tomatenso\u00dfe \"Napoli\"",
+        "price":{
+            "student":1.9,
+            "normal":2.55
+        },
+        "meal_id":"ce029b95250e7bae0bb5a839233fda13fb28dba8e9d8f00122cb366c42d2456a",
+        "additives":[]
+    },
+    {
+        "ratings":[],
+        "dates":["09.11.2012"],
+        "name":"Putengeschnetzeltes Thail\u00e4ndische Art",
+        "price":{
+            "student":2.7,
+            "normal":3.2
+        },
+        "meal_id":"fcecfe30a5218633943247b6f477b398a8185b4890c1be2d84f587d33b899124",
+        "additives":["Gefl\u00fcgel"]
+    }
+], "success":true}
