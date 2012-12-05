@@ -1,21 +1,18 @@
 package com.example.StdDAOs;
 
+import android.util.Log;
 import com.example.utils.Utils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Vector;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
  * User: Falk Alexander
  * Date: 29.11.12
  * Time: 09:32
- * To change this template use File | Settings | File Templates.
  */
 public class Meal {
     private GetRating[] ratings;
@@ -34,6 +31,18 @@ public class Meal {
         this.prices = prices;
         this.mealId = mealId;
         this.additives = additives;
+    }
+
+    @Override
+    public String toString() {
+        return "Meal{" +
+                "ratings=" + (ratings == null ? null : Arrays.asList(ratings)) +
+                ", date=" + (date == null ? null : Arrays.asList(date)) +
+                ", name='" + name + '\'' +
+                ", prices=" + prices +
+                ", mealId='" + mealId + '\'' +
+                ", additives=" + (additives == null ? null : Arrays.asList(additives)) +
+                '}';
     }
 
     public GetRating[] getRatings() {
@@ -86,16 +95,19 @@ public class Meal {
 
     public static Meal[] getMeals(JSONArray ja) throws JSONException {
         JSONObject jo;
-        Vector<Meal> meals = new Vector<Meal>();
+        ArrayList<Meal> meals = new ArrayList<Meal>();
         for (int i = 0; i < ja.length(); i++) {
             jo = ja.getJSONObject(i);
             meals.add(new Meal(GetRating.getRatings(jo.getJSONArray("ratings")),
-                    Utils.getStringsFromJsonArray(jo.getJSONArray("dates")),
+                    Utils.parseJsonToStringArray(jo.getString("date")),
                     jo.getString("name"), Meal.getPrice(jo.getJSONObject("price")),
                     jo.getString("meal_id"),
-                    Utils.getStringsFromJsonArray(jo.getJSONArray("additives"))));
+                    Utils.parseJsonToStringArray(jo.getString("additives"))));
+            Log.e("additives", Utils.parseJsonToStringArray(jo.getString("additives"))[0]);
         }
-        return (Meal[]) meals.toArray();
+        Meal[] m = new Meal[meals.size()];
+        m = meals.toArray(m);
+        return m;
     }
 
     public static Map<String, Double> getPrice(JSONObject jo) throws JSONException {

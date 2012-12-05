@@ -10,7 +10,6 @@ import java.util.Date;
  * User: Falk Alexander
  * Date: 01.12.12
  * Time: 10:57
- * To change this template use File | Settings | File Templates.
  */
 public class BasicRating {
     protected Double costPerformance;
@@ -53,5 +52,14 @@ public class BasicRating {
 
     public static BasicRating fromJson(String json) throws JSONException {
         return fromJson(new JSONObject(json));
+    }
+
+    @Override
+    public String toString() {
+        return "BasicRating{" +
+                "costPerformance=" + costPerformance +
+                ", taste=" + taste +
+                ", quantity=" + quantity +
+                '}';
     }
 }

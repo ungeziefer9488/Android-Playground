@@ -11,7 +11,6 @@ import java.util.Vector;
  * User: Falk Alexander
  * Date: 01.12.12
  * Time: 11:30
- * To change this template use File | Settings | File Templates.
  */
 enum RatingFormat {
     LONG, SHORT;

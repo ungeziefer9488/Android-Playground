@@ -3,6 +3,7 @@ package com.example.utils;
 
 import com.example.StdDAOs.Meal;
 import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
@@ -21,8 +22,20 @@ import java.util.Vector;
  * User: Falk Alexander
  * Date: 29.11.12
  * Time: 08:33
- * To change this template use File | Settings | File Templates.
  */
+enum HttpVerbs {
+    //TODO: Verify the Functions.
+    GET("org.apache.http.client.methods.HttpGet"), POST("HttpPost"), PUT("HttpPut"), DELETE("HttpDelete");
+    private String function;
+
+    HttpVerbs(String function) {
+        this.function = function;
+    }
+
+    public String getFunction() {
+        return function;
+    }
+}
 public class Utils {
     /**
      *
@@ -37,10 +50,11 @@ public class Utils {
      * @throws IOException
      * @throws JSONException
      */
-    public static JSONObject getJsonFromServer(String url, String httpMethodName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException, JSONException {
+    public static JSONObject getJsonFromServer(String url, HttpVerbs httpMethodName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException, JSONException {
         // defaultHttpClient
         DefaultHttpClient httpClient = new DefaultHttpClient();
-        HttpUriRequest httpReq = (HttpUriRequest) Class.forName(httpMethodName).getConstructor(String.class).newInstance(url);
+        HttpGet httpReq = new HttpGet(url);
+        //HttpUriRequest httpReq = (HttpUriRequest) Class.forName(httpMethodName.getFunction()).getConstructor(HttpUriRequest.class).newInstance(url);
 
         HttpResponse httpResponse = httpClient.execute(httpReq);
         BufferedReader reader;
@@ -64,7 +78,7 @@ public class Utils {
      * @throws JSONException
      */
     public static  JSONObject getJsonFromServer() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException, JSONException {
-        return getJsonFromServer("192.168.0.12:8000/meals/", "HttpGet");
+        return getJsonFromServer("http://141.82.160.130:8000/meals/", HttpVerbs.GET);
     }
 
     /**
@@ -79,7 +93,9 @@ public class Utils {
         for (int i = 0; i < ja.length(); i++) {
             strings.add(ja.getString(i));
         }
-        return (String[]) strings.toArray();
+        String[] s = new String[strings.capacity()];
+        s = strings.toArray(s);
+        return s;
     }
 
     /**
@@ -89,7 +105,7 @@ public class Utils {
      * @throws ServerFailureException
      */
     public static Meal[] fetchNewMeals() throws ServerFailureException {
-         Meal[] meals;
+         Meal[] meals = new Meal[0];
         try {
             JSONObject jo = getJsonFromServer();
             boolean success = jo.getBoolean("success");
@@ -99,9 +115,29 @@ public class Utils {
                 throw new ServerFailureException(error);
             }
             meals = Meal.getMeals(jo.getJSONArray("meals"));
-        } catch (Exception e) {
-            throw new ServerFailureException(e.getMessage());
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (JSONException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (InstantiationException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
         return meals;
+    }
+
+    public static String[] parseJsonToStringArray(String toParse) {
+        //TODO: Improve this!
+        toParse = toParse.replaceAll("\"", "");
+        toParse = toParse.replaceAll("]", "");
+        toParse = toParse.replaceAll("\\[", "");
+        return toParse.split(",");
     }
 }

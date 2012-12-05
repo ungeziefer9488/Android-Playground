@@ -14,7 +14,6 @@ import org.json.JSONObject;
  * User: Falk Alexander
  * Date: 28.11.12
  * Time: 09:55
- * To change this template use File | Settings | File Templates.
  */
 public class JsonTest extends Activity {
     public void onCreate(Bundle savedInstanceState) {
@@ -23,6 +22,9 @@ public class JsonTest extends Activity {
         try {
             jo = Utils.getJsonFromServer();
             Meal[] meals = Utils.fetchNewMeals();
+            for (Meal m : meals) {
+                Log.e("meal", m.toString());
+            }
         } catch (ServerFailureException e) {
             //TODO: This is a error the user might be interested in.
             Log.e("some failure at the server", e.getMessage());

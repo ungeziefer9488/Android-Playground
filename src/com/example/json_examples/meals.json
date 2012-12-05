@@ -1,0 +1,332 @@
+{"meals":[
+    {
+        "ratings":[],
+        "name":"Blumenkohl mit Hollandaise und K\u00e4se \u00fcberbacken",
+        "price":{
+            "student":1.9,
+            "normal":2.55
+        },
+        "date":["05.11.2012"],
+        "meal_id":"9879f3b21a3e05a1f96c36c8aff3a1e4c4fe1bba8232c65a6447d8b6bd823197",
+        "additives":[]
+    },
+    {
+        "ratings":[],
+        "name":"Allg\u00e4uer Schweineschnitzel mit Sp\u00e4tzle",
+        "price":{
+            "student":2.15,
+            "normal":2.85
+        },
+        "date":["05.11.2012"],
+        "meal_id":"32fc78aa62fefdb10619cccb49f77918f0bb76ecbdafbea98e4140a94ad2adb7",
+        "additives":["Schweinefleisch"]
+    },
+    {
+        "ratings":[],
+        "name":"Orientalische Gem\u00fcsepfanne mit Zartweizen und ger\u00f6stetem Sesam ",
+        "price":{
+            "student":2.5,
+            "normal":3.2
+        },
+        "date":["05.11.2012"],
+        "meal_id":"13cd6346d0948a8eeadef8e265b56ff46a50d382fe203e2e5c78c78d7c6695e1",
+        "additives":[]
+    },
+    {
+        "ratings":[],
+        "name":"Penne Arrabiata",
+        "price":{
+            "student":1.9,
+            "normal":2.55
+        },
+        "date":["06.11.2012"],
+        "meal_id":"11db9a552826b870bf259def5056e4e9138e9f3ac745682cdbfce49ceae9db7b",
+        "additives":[]
+    },
+    {
+        "ratings":[],
+        "name":"Cordon Bleu von der H\u00e4hnchenbrust mit Sp\u00e4tzle",
+        "price":{
+            "student":2.15,
+            "normal":2.55
+        },
+        "date":["06.11.2012"],
+        "meal_id":"c4825b29c878c47bc45f8ded8cba382570bcd1e5735ca6223d0dcab24cef2bfb",
+        "additives":["Gefl\u00fcgel"]
+    },
+    {
+        "ratings":[],
+        "name":"Chinesische Nudelpfanne",
+        "price":{
+            "student":2.7,
+            "normal":3.4
+        },
+        "date":["06.11.2012"],
+        "meal_id":"c2f5a8217d8fbd5c6bd6a4f678955d9a9465582c441179da07216ca74e77d70b",
+        "additives":["mit Konservierungsstoff"]
+    },
+    {
+        "ratings":[],
+        "name":"Mezzalune mit feiner K\u00fcrbisf\u00fcllung",
+        "price":{
+            "student":2.15,
+            "normal":2.85
+        },
+        "date":["07.11.2012"],
+        "meal_id":"569fc712a45cfbb6700ac95329250c37339a0174f4fcb1929ba02f2103e6b080",
+        "additives":[]
+    },
+    {
+        "ratings":[],
+        "name":"Bunter Hackbraten mit Rahmso\u00dfe und Kartoffelbrei",
+        "price":{
+            "student":2.15,
+            "normal":2.85
+        },
+        "date":["07.11.2012"],
+        "meal_id":"9e4282c3adecd7aa0019b122bf8128700dc295fdc7808bed45464f014100df22",
+        "additives":["Rindfleisch", "mit Antioxidationsmittel"]
+    },
+    {
+        "ratings":[],
+        "name":"Feuriges Gem\u00fcse-Fischcurry mit Ingwerreis",
+        "price":{
+            "student":2.5,
+            "normal":3.2
+        },
+        "date":["07.11.2012"],
+        "meal_id":"3618c5a15099fc93bb0defae7423436c34c0b592788adba341c9cbdcfada9c9d",
+        "additives":["Fisch"]
+    },
+    {
+        "ratings":[],
+        "name":"Spagetti \"Bolognese\" mit Wurzelgem\u00fcse und Parmesan",
+        "price":{
+            "student":1.9,
+            "normal":2.55
+        },
+        "date":["08.11.2012"],
+        "meal_id":"5fdc6687603fd21ff976deeb72e625d7db4c3e63b3d27f01efd5d01c9333207d",
+        "additives":["Rindfleisch", "mit Alkohol", "mit Konservierungsstoff"]
+    },
+    {
+        "ratings":[],
+        "name":"Chicken Wings an Salatgarnitur",
+        "price":{
+            "student":2.15,
+            "normal":2.85
+        },
+        "date":["08.11.2012"],
+        "meal_id":"32b7fd44636e2aea701646e94778772515fc2b52f7c4fb895f0d96cc53a2ffac",
+        "additives":["mit S\u00fc\u00dfungsmittel"]
+    },
+    {
+        "ratings":[],
+        "name":"H\u00e4hnchenbrust mit Ananas aus dem Wok mit Gem\u00fcse und Basmatireis",
+        "price":{
+            "student":2.7,
+            "normal":3.2
+        },
+        "date":["08.11.2012"],
+        "meal_id":"41305d4f597646f6cd0cd76ada9a8059e0629e5125d72408031e548c186ad38f",
+        "additives":["Gefl\u00fcgel", "gewachst"]
+    },
+    {
+        "ratings":[],
+        "name":"Currywurst mit Pommes frites",
+        "price":{
+            "student":2.15,
+            "normal":2.85
+        },
+        "date":["09.11.2012"],
+        "meal_id":"3b02ecc2a2e294fde2451a1ca9a823825848644519b0e947c897e1cfcc1595b1",
+        "additives":["Schweinefleisch", "mit S\u00fc\u00dfungsmittel"]
+    },
+    {
+        "ratings":[],
+        "name":"Pasta mit Tomatenso\u00dfe \"Napoli\"",
+        "price":{
+            "student":1.9,
+            "normal":2.55
+        },
+        "date":["09.11.2012"],
+        "meal_id":"1d5c5ba161d0e96bfd132545ccc3cb4cfa06072aa851462f100b1468a67d2091",
+        "additives":[]
+    },
+    {
+        "ratings":[],
+        "name":"Putengeschnetzeltes Thail\u00e4ndische Art",
+        "price":{
+            "student":2.7,
+            "normal":3.2
+        },
+        "date":["09.11.2012"],
+        "meal_id":"511a611bec13f3b6364116c193e8f800130f0044a18bc898fc6f6fd70429ed1e",
+        "additives":["Gefl\u00fcgel"]
+    },
+    {
+        "ratings":[],
+        "name":"Spaghetti Bolognese",
+        "price":{
+            "student":1.9,
+            "normal":2.55
+        },
+        "date":["03.12.2012"],
+        "meal_id":"63dea2e9d15e5e698081395afbc2836ef4df8fbeb84753c26a802627f34b5915",
+        "additives":["mit Konservierungsstoff"]
+    },
+    {
+        "ratings":[],
+        "name":"Schweineschnitzel paniert mit Zitrone und Salatgarnitur",
+        "price":{
+            "student":2.15,
+            "normal":2.85
+        },
+        "date":["03.12.2012"],
+        "meal_id":"698c8ea9e9f4bb7ec1ef4ea2e76a396a7d7bd5746535dbbc31a1362c9a25351b",
+        "additives":["Schweinefleisch"]
+    },
+    {
+        "ratings":[],
+        "name":"Rinderh\u00fcfte aus dem Wok mit Gem\u00fcse",
+        "price":{
+            "student":2.7,
+            "normal":3.4
+        },
+        "date":["03.12.2012"],
+        "meal_id":"10b0de3655d4632a2f0448d09707537aeda7bed3f1f1589fdeb530d7a52518ff",
+        "additives":["Rindfleisch"]
+    },
+    {
+        "ratings":[],
+        "name":"Blumenkohl mit Butter, Ei, Semmelbr\u00f6sel und Salzkartoffel",
+        "price":{
+            "student":1.9,
+            "normal":2.55
+        },
+        "date":["04.12.2012"],
+        "meal_id":"7dfd5adf901d599e039e6bcbb8f3f7c1c1178cb26435422429e465b1bc444bcd",
+        "additives":[]
+    },
+    {
+        "ratings":[],
+        "name":"Schinkennudeln",
+        "price":{
+            "student":1.9,
+            "normal":2.55
+        },
+        "date":["04.12.2012"],
+        "meal_id":"dd0522d2bc63619de2c2471ac11bbf7a41c6c14110e3ae30c8e19fbb0a75f8a4",
+        "additives":["Schweinefleisch", "mit Konservierungsstoff"]
+    },
+    {
+        "ratings":[],
+        "name":"Rinderhackstrudel mit Waldpilzso\u00dfe",
+        "price":{
+            "student":3.0,
+            "normal":3.75
+        },
+        "date":["04.12.2012"],
+        "meal_id":"2e20f7e4119a779fe4bcd639204ea7ac81255bba9799bcd161af2ea8fe47e431",
+        "additives":["Rindfleisch"]
+    },
+    {
+        "ratings":[],
+        "name":"Vegetarischer Pastariegel mit Joghurtdip und Salatgarnitur",
+        "price":{
+            "student":1.9,
+            "normal":2.55
+        },
+        "date":["05.12.2012"],
+        "meal_id":"6de1b3da5437e19e43a5ff10c789e079c110810cc4a1166cb5cb303ebc21dbfa",
+        "additives":[]
+    },
+    {
+        "ratings":[],
+        "name":"Mini Schweinshaxe mit Kartoffelkn\u00f6del und So\u00dfe",
+        "price":{
+            "student":2.15,
+            "normal":2.85
+        },
+        "date":["05.12.2012"],
+        "meal_id":"d4ac5494a5397c68ed02ef3c6c1dccd369afcca01e4955056adc844387321337",
+        "additives":[]
+    },
+    {
+        "ratings":[],
+        "name":"Putenragout mit Mango, Ananas und Tomaten dazu Bandnudeln",
+        "price":{
+            "student":2.5,
+            "normal":3.2
+        },
+        "date":["05.12.2012"],
+        "meal_id":"25885c97540067300561b97c5e6f706a006656d85c4acf2ea5513f9ba4bb2562",
+        "additives":["Gefl\u00fcgel", "gewachst"]
+    },
+    {
+        "ratings":[],
+        "name":"K\u00e4senudeln mit R\u00f6stzwiebeln",
+        "price":{
+            "student":1.9,
+            "normal":2.55
+        },
+        "date":["06.12.2012"],
+        "meal_id":"d368be711532305c7be376d57f6581008d476dba025b10f33f1d46e420e152b2",
+        "additives":["mit Farbstoff"]
+    },
+    {
+        "ratings":[],
+        "name":"Ungarisches Gulasch mit Rondelli-Nudeln",
+        "price":{
+            "student":2.15,
+            "normal":2.85
+        },
+        "date":["06.12.2012"],
+        "meal_id":"e6ce08ccbe4a6472342fcb9c30a158b1bc0536130708b004c6b97d15388975e5",
+        "additives":["Rindfleisch"]
+    },
+    {
+        "ratings":[],
+        "name":"Lachsw\u00fcrfel und Kirschtomaten in Wei\u00dfwein-Limonenso\u00dfe, dazu Pasta ",
+        "price":{
+            "student":2.5,
+            "normal":3.2
+        },
+        "date":["06.12.2012"],
+        "meal_id":"338d06fe826ce98759b5751e230e6505577671dcee932afed25453ecf5e62971",
+        "additives":["Fisch"]
+    },
+    {
+        "ratings":[],
+        "name":"4 Kartoffelpuffer mit Apfelmus",
+        "price":{
+            "student":1.9,
+            "normal":2.55
+        },
+        "date":["07.12.2012"],
+        "meal_id":"1736000f403e9681b133a83077c5f6746bb68b51ff0c3b57c1e35de841f1ba4b",
+        "additives":["mit Antioxidationsmittel", "mit S\u00fc\u00dfungsmittel"]
+    },
+    {
+        "ratings":[],
+        "name":"1 Paar Wollw\u00fcrste mit Kartoffelsalat",
+        "price":{
+            "student":2.15,
+            "normal":2.85
+        },
+        "date":["07.12.2012"],
+        "meal_id":"5aeeae966f01bac77f2882083b5a81e82ee3955e9886378ec11371b409ee7f99",
+        "additives":["Schweinefleisch", "mit Antioxidationsmittel", "mit Phosphat", "mit S\u00fc\u00dfungsmittel"]
+    },
+    {
+        "ratings":[],
+        "name":"Vollkornspaghetti mit Bolognese von roten Linsen ",
+        "price":{
+            "student":2.5,
+            "normal":3.2
+        },
+        "date":["07.12.2012"],
+        "meal_id":"a4153b5552b8bb7cbcd58fd882e417d1f5b5d89647b28537b3b14f945a24e522",
+        "additives":["mit Konservierungsstoff"]
+    }
+], "success":true}

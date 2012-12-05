@@ -22,7 +22,7 @@ public class MyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);                // The URL for making the GET request
-        String url = "http://192.168.0.12:8000/update/";
+        /*String url = "http://192.168.0.12:8000/update/";
 
         // Set the Accept header for "application/json"
         HttpHeaders requestHeaders = new HttpHeaders();
@@ -71,6 +71,6 @@ public class MyActivity extends Activity {
         //String postresponseEntity = restTemplate.postForObject(url, smr, String.class);
         ResponseEntity responseEntity = restTemplate.exchange(url, HttpMethod.POST, postrequestEntity, null, mealId);
         //Log.e("post test", responseEntity.getBody().toString());
-        setContentView(R.layout.main);
+        setContentView(R.layout.main);*/
     }
 }

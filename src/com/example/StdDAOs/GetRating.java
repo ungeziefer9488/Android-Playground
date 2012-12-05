@@ -1,9 +1,11 @@
 package com.example.StdDAOs;
 
+import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 /**
@@ -11,7 +13,6 @@ import java.util.Vector;
  * User: Falk Alexander
  * Date: 01.12.12
  * Time: 11:16
- * To change this template use File | Settings | File Templates.
  */
 
 /**
@@ -33,16 +34,25 @@ public class GetRating extends BasicRating {
     }
 
     public static GetRating[] getRatings(JSONArray ja) throws JSONException {
-        Vector<GetRating> getRatings = new Vector<GetRating>();
+        ArrayList<GetRating> getRatings = new ArrayList<GetRating>();
         for (int i = 0; i < ja.length(); i++) {
             JSONObject jo = ja.getJSONObject(i);
             getRatings.add(new GetRating(jo.getString("date"), jo.getDouble("cost_performance"), jo.getDouble("taste"), jo.getDouble("quantity")));
         }
-        return (GetRating[]) getRatings.toArray();
+        GetRating[] gr = new GetRating[getRatings.size()];
+        gr = getRatings.toArray(gr);
+        return gr;
     }
 
     public static GetRating[] getRatings(String json) throws JSONException {
         JSONArray ja = new JSONArray(json);
         return getRatings(ja);
+    }
+
+    @Override
+    public String toString() {
+        return "GetRating{" +
+                "date='" + date + '\'' +
+                "} " + super.toString();
     }
 }
