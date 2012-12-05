@@ -4,6 +4,7 @@ package com.example.utils;
 import com.example.StdDAOs.Meal;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
@@ -66,6 +67,25 @@ public class Utils {
         return new JSONObject(json);
     }
 
+    public static void postJsonToServer(String url) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException, JSONException, ServerFailureException {
+        // defaultHttpClient
+        DefaultHttpClient httpClient = new DefaultHttpClient();
+        HttpPost httpReq = new HttpPost(url);
+        //HttpUriRequest httpReq = (HttpUriRequest) Class.forName(httpMethodName.getFunction()).getConstructor(HttpUriRequest.class).newInstance(url);
+        //TODO: Set the content of the POST Method.
+        HttpResponse httpResponse = httpClient.execute(httpReq);
+        BufferedReader reader;
+        String json;
+        reader = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent()));
+        //TODO: The assumption is, that the json object is delivered in one line.
+        json = reader.readLine();
+
+        JSONObject jo = new JSONObject(json);
+        if (!jo.getBoolean("success")) {
+            throw new ServerFailureException(jo.getString("error"));
+        }
+    }
+
     /**
      *
      * @return
@@ -78,7 +98,7 @@ public class Utils {
      * @throws JSONException
      */
     public static  JSONObject getJsonFromServer() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException, JSONException {
-        return getJsonFromServer("http://141.82.160.130:8000/meals/", HttpVerbs.GET);
+        return getJsonFromServer("http://192.168.0.12:8000/meals/", HttpVerbs.GET);
     }
 
     /**

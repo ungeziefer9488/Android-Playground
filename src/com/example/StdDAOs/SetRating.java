@@ -8,7 +8,6 @@ import org.json.JSONObject;
  * User: Falk Alexander
  * Date: 02.12.12
  * Time: 16:45
- * To change this template use File | Settings | File Templates.
  */
 public class SetRating extends BasicRating{
     protected String userId;
