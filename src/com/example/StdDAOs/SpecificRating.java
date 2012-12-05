@@ -8,7 +8,7 @@ import java.util.Vector;
 
 /**
  * Created with IntelliJ IDEA.
- * User: Ungeziefer
+ * User: Falk Alexander
  * Date: 01.12.12
  * Time: 11:30
  * To change this template use File | Settings | File Templates.

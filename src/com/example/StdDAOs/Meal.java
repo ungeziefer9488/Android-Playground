@@ -12,7 +12,7 @@ import java.util.Vector;
 
 /**
  * Created with IntelliJ IDEA.
- * User: falk
+ * User: Falk Alexander
  * Date: 29.11.12
  * Time: 09:32
  * To change this template use File | Settings | File Templates.

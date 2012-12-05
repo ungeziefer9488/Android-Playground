@@ -18,7 +18,7 @@ import java.util.Vector;
 
 /**
  * Created with IntelliJ IDEA.
- * User: falk
+ * User: Falk Alexander
  * Date: 29.11.12
  * Time: 08:33
  * To change this template use File | Settings | File Templates.
@@ -44,7 +44,7 @@ public class Utils {
 
         HttpResponse httpResponse = httpClient.execute(httpReq);
         BufferedReader reader;
-        String json = null;
+        String json;
             reader = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent()));
             //TODO: The assumption is, that the json object is delivered in one line.
             json = reader.readLine();
