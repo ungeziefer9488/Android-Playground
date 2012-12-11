@@ -6,6 +6,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -43,15 +44,10 @@ public class Utils {
      * @param url
      * @param httpMethodName
      * @return
-     * @throws ClassNotFoundException
-     * @throws NoSuchMethodException
-     * @throws InvocationTargetException
-     * @throws IllegalAccessException
-     * @throws InstantiationException
      * @throws IOException
      * @throws JSONException
      */
-    public static JSONObject getJsonFromServer(String url, HttpVerbs httpMethodName) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException, JSONException {
+    public static JSONObject getJsonFromServer(String url, HttpVerbs httpMethodName) throws IOException, JSONException {
         // defaultHttpClient
         DefaultHttpClient httpClient = new DefaultHttpClient();
         HttpGet httpReq = new HttpGet(url);
@@ -67,12 +63,23 @@ public class Utils {
         return new JSONObject(json);
     }
 
-    public static void postJsonToServer(String url) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException, JSONException, ServerFailureException {
+    /**
+     *
+     * @return
+     * @throws IOException
+     * @throws JSONException
+     * @throws ServerFailureException
+     */
+    public static  JSONObject getJsonFromServer() throws  IOException, JSONException {
+        return getJsonFromServer("http://192.168.0.12:8000/meals/", HttpVerbs.GET);
+    }
+
+    public static void postJsonToServer(String url, String entity) throws IOException, JSONException, ServerFailureException {
         // defaultHttpClient
         DefaultHttpClient httpClient = new DefaultHttpClient();
         HttpPost httpReq = new HttpPost(url);
         //HttpUriRequest httpReq = (HttpUriRequest) Class.forName(httpMethodName.getFunction()).getConstructor(HttpUriRequest.class).newInstance(url);
-        //TODO: Set the content of the POST Method.
+        httpReq.setEntity(new StringEntity(entity));
         HttpResponse httpResponse = httpClient.execute(httpReq);
         BufferedReader reader;
         String json;
@@ -86,19 +93,8 @@ public class Utils {
         }
     }
 
-    /**
-     *
-     * @return
-     * @throws ClassNotFoundException
-     * @throws NoSuchMethodException
-     * @throws InvocationTargetException
-     * @throws IllegalAccessException
-     * @throws InstantiationException
-     * @throws IOException
-     * @throws JSONException
-     */
-    public static  JSONObject getJsonFromServer() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException, IOException, JSONException {
-        return getJsonFromServer("http://192.168.0.12:8000/meals/", HttpVerbs.GET);
+    public static void postRating(String mealId, String entity) throws IOException, JSONException, ServerFailureException {
+        postJsonToServer("http://192.168.0.12:8000/meals/"+mealId+"/", entity);
     }
 
     /**
@@ -124,9 +120,8 @@ public class Utils {
      * @return
      * @throws ServerFailureException
      */
-    public static Meal[] fetchNewMeals() throws ServerFailureException {
+    public static Meal[] fetchNewMeals() throws ServerFailureException, IOException, JSONException {
          Meal[] meals = new Meal[0];
-        try {
             JSONObject jo = getJsonFromServer();
             boolean success = jo.getBoolean("success");
             if (!success) {
@@ -135,21 +130,6 @@ public class Utils {
                 throw new ServerFailureException(error);
             }
             meals = Meal.getMeals(jo.getJSONArray("meals"));
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (JSONException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (InstantiationException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
         return meals;
     }
 

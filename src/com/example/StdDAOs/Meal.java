@@ -103,7 +103,6 @@ public class Meal {
                     jo.getString("name"), Meal.getPrice(jo.getJSONObject("price")),
                     jo.getString("meal_id"),
                     Utils.parseJsonToStringArray(jo.getString("additives"))));
-            Log.e("additives", Utils.parseJsonToStringArray(jo.getString("additives"))[0]);
         }
         Meal[] m = new Meal[meals.size()];
         m = meals.toArray(m);
