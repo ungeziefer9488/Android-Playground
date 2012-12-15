@@ -84,7 +84,7 @@ public class Utils {
         BufferedReader reader;
         String json;
         reader = new BufferedReader(new InputStreamReader(httpResponse.getEntity().getContent()));
-        //TODO: The assumption is, that the json object is delivered in one line.
+        //TODO: An assumption is, that the json object is delivered in one line.
         json = reader.readLine();
 
         JSONObject jo = new JSONObject(json);
@@ -121,12 +121,11 @@ public class Utils {
      * @throws ServerFailureException
      */
     public static Meal[] fetchNewMeals() throws ServerFailureException, IOException, JSONException {
-         Meal[] meals = new Meal[0];
+         Meal[] meals;
             JSONObject jo = getJsonFromServer();
             boolean success = jo.getBoolean("success");
             if (!success) {
                 String error = jo.getString("error");
-                //TODO: This looks like bad style. There is room for improvement!
                 throw new ServerFailureException(error);
             }
             meals = Meal.getMeals(jo.getJSONArray("meals"));
@@ -134,7 +133,7 @@ public class Utils {
     }
 
     public static String[] parseJsonToStringArray(String toParse) {
-        //TODO: Improve this!
+        //TODO: Improve this! Write a regex that replaces everything with ine call. Or do something different.
         toParse = toParse.replaceAll("\"", "");
         toParse = toParse.replaceAll("]", "");
         toParse = toParse.replaceAll("\\[", "");
